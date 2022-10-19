@@ -3,21 +3,19 @@
 <style>
       
     .collapse {
-        background-color: #a2de96;
         border: none;
         outline: none;
-        font-size: 10px;
+        font-size: 12px;
     }
    
     .active,
     .collapse:hover {
-        background-color: #438a5e;
+        background-color: #a3c1ad;
     }
    
     .text {
-        background-color: #e1ffc2;
         display: none;
-        font-size: 10px;
+        font-size: 12px;
     }
 </style>
 
@@ -38,7 +36,6 @@
       <header>
         <h1> George Nikolakoudis </h1>
 	<img src="Image-1.jpg">
-        <p>4th year Graduate Student at Princeton University</p>
       </header>
       <section>
 
@@ -46,17 +43,14 @@
 
 	<h2 id="working-papers">Working Papers</h2>
 
-        <p>"Heterogeneous Deleveraging." <a href="deleveraging_draft9.pdf">Paper</a>, <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4251925">SSRN Link</a>. October 2022.</p>
+        <p>"Heterogeneous Deleveraging." <a href="deleveraging_draft9.pdf">Paper</a>, <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4251925">SSRN Link</a>. October 2022. </p>
 	
 	<button type="button" class="collapse">
         Abstract
     	</button>
       
     	<div class="text">
-        A Computer Science portal for geeks. 
-        It contains well written, well thought 
-        and well explained computer science and
-        programming articles, quizzes and ...
+        I empirically show that different types of houses experience substantially different rates of return over nation-wide housing cycles, even within narrow geographical areas. In order to understand the implications of this rate of return heterogeneity for the propagation of macroeconomic shocks, I present a dynamic assignment model in which housing is segmented by various quality tiers. I show that the model's unique equilibrium features unidirectional propagation of shocks within the housing market -- changes in households' valuation of low-end homes have spill-over effects to house prices across the entire quality spectrum. I characterize the strength of these spill-over effects analytically, examine how they shape the cross-sectional response of house prices to changes in the economic environment, and show that they can lead to an amplification channel for the response of aggregate consumption expenditures to changes in house prices. In the data, consistent with the theory, shocks that affect high-income households only induce changes in the prices of high-end homes, whereas shocks that affect low-income households affect house prices in the entire market.
     	</div>
    
     	<script>
@@ -73,13 +67,68 @@
         	});
   
     	</script>
-	
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
 
         <h2 id="progress"> Works in Progress</h2>
 
         <p>"Informational Gravity," with Elena Aguilar.</p>
 
+<button type="button" class="collapse">
+        Abstract
+    	</button>
+      
+    	<div class="text">
+        We present a model of exporter dynamics in which aggregate uncertainty is endogenous to the exporting decisions of firms within a given market. Exporting firms provide an imperfect signal regarding the returns to exporting to rival firms within the same industry. This creates an informational externality arising through the extensive margin that can lead to informational ``cascades" and multiple stochastic steady states in aggregate exports. The presence of this externality creates additional dynamic gains from the reduction in trade costs, which amplify the canonical static gains. The magnitude of these dynamic gains are decreasing in firm productivity dispersion and increasing in the (industry-level) elasticity of substitution. Our analysis suggests that temporary increases in trade costs can result in secular declines in aggregate exports through a permanent increase in firm-level uncertainty. We leverage text-based measures of uncertainty for OECD countries to test the theory. 
+    	</div>
+   
+    	<script>
+        	var btn = document.getElementsByClassName("collapse");
+   
+        	btn[1].addEventListener("click", function () {
+            		this.classList.toggle("active");
+            		var content = this.nextElementSibling;
+            		if (content.style.display === "block") {
+                		content.style.display = "none";
+            		} else {
+                		content.style.display = "block";
+            		}
+        	});
+  
+    	</script>
+
+	<p></p>
+	<p></p>
+
         <p>"Rational Inattention: Signals and Precision."</p>
+	
+<button type="button" class="collapse">
+        Abstract
+    	</button>
+      
+    	<div class="text">
+        This paper analyzes the continuous action rational inattention problem with binary states. I show that it is generally never optimal for an agent to acquire linearly dependent signals, which as a corollary implies that an agent will never choose more actions than there are states of the world. I demonstrate that the agent's optimal signal structure can be completely characterized through a single, univariate function. An intuitive condition on local convexity on this function determines the entire set of priors for which strictly positive information acquisition is optimal. Finally, I characterize state-dependent precision in information choice. In the widely used case of quadratic utility, I show that signal precision is invariant to the realization of the underlying state, thus providing a counterpart to the canonical Quadratic-Gaussian case when states are binary (Jung et al., 2019). I show that a necessary condition for state-dependent signal precision is variation in the convexity of marginal utility along the action space. 
+    	</div>
+   
+    	<script>
+        	var btn = document.getElementsByClassName("collapse");
+   
+        	btn[2].addEventListener("click", function () {
+            		this.classList.toggle("active");
+            		var content = this.nextElementSibling;
+            		if (content.style.display === "block") {
+                		content.style.display = "none";
+            		} else {
+                		content.style.display = "block";
+            		}
+        	});
+  
+    	</script>
+
+	<p></p>
+	<p></p>
 
       </section>
       <footer>
