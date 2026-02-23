@@ -268,3 +268,224 @@ footer {
     color:#444;
   }
 }
+
+/* ==========================================================================
+   Site refinements (nikolakoudis.com) — 2026-02
+   Drop-in overrides for the OrderedList GitHub Pages theme.
+   Keep your HTML structure; let CSS do the polishing.
+   ========================================================================== */
+
+:root{
+  --bg: #f7f7f9;
+  --card: #ffffff;
+  --text: #070000;
+  --muted: #444444;
+  --border: #e6e6ea;
+
+  /* Accent pulled from your current hover color (#ad95ae) but made a touch deeper */
+  --accent: #6a4b6f;
+  --accent-soft: #ad95ae;
+}
+
+body{
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 32px;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+/* Turn the wrapper into a clean "card" */
+.wrapper{
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 34px 34px 22px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.07);
+}
+
+/* Modern two-column layout WITHOUT changing your HTML (header/section/footer) */
+@media screen and (min-width: 961px){
+  .wrapper{
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    grid-template-areas:
+      "header section"
+      "footer section";
+    column-gap: 52px;
+    align-items: start;
+  }
+
+  header{
+    grid-area: header;
+    position: sticky;
+    top: 32px;
+    width: auto;
+    float: none;
+  }
+
+  section{
+    grid-area: section;
+    width: auto;
+    float: none;
+    padding-bottom: 0;
+  }
+
+  footer{
+    grid-area: footer;
+    width: auto;
+    float: none;
+    position: sticky;
+    bottom: 32px;
+  }
+}
+
+/* Header typography + headshot */
+header h1{
+  margin: 0 0 12px;
+  text-align: center;
+  font-size: 2.05rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+header img{
+  display: block;
+  margin: 0 auto;
+  width: 175px;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}
+
+/* Section headings: clearer hierarchy */
+h2{
+  color: #2f2f2f;
+  margin-top: 2.2rem;
+  margin-bottom: 0.9rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+h2::after{
+  content:"";
+  display:block;
+  width: 56px;
+  height: 2px;
+  background: var(--accent-soft);
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+/* Links: more readable + more "serious" */
+a{
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover{
+  color: var(--accent-soft);
+  text-decoration-thickness: 2px;
+}
+
+/* Paragraph rhythm + remove your spacer <p></p> without touching HTML */
+section p{
+  margin: 0 0 0.95rem;
+}
+
+section p:empty{
+  display: none;
+}
+
+/* Horizontal rule spacing */
+hr{
+  background: var(--border);
+  height: 1px;
+  margin: 1.4rem 0;
+}
+
+/* Optional: nicer "collapse" widgets (if/when you use them) */
+.collapse{
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 2px 10px;
+  font-size: 0.92rem;
+  line-height: 1.2;
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+.collapse:hover,
+.collapse.active{
+  background-color: rgba(173,149,174,0.18);
+  border-color: var(--accent-soft);
+}
+
+.text{
+  display: none;
+  margin: 10px 0 0;
+  padding-left: 14px;
+  border-left: 2px solid var(--border);
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+/* Mobile polish */
+@media screen and (max-width: 960px){
+  body{ padding: 16px; }
+  .wrapper{
+    padding: 22px 18px;
+    border-radius: 10px;
+  }
+  header img{
+    width: 150px;
+    height: 150px;
+  }
+  /* The base theme adds a border around section on mobile; keep it clean */
+  section{
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  header{
+    padding-right: 0 !important;
+  }
+}
+
+/* Printing: don’t waste ink with shadows */
+@media print{
+  body{ background: #fff !important; }
+  .wrapper{
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+  header img{
+    box-shadow: none !important;
+  }
+}
+
+/* Profile picture + roles (under headshot) */
+header img{
+  display: block;
+  margin: 0 auto;
+}
+
+header .profile-roles{
+  margin: 10px auto 0;
+  max-width: 280px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.35;
+  color: #777;
+}
+
